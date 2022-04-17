@@ -1,0 +1,260 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/*le design de la page d'accueil*/
+.accueil{
+    width: 100%;
+    height: 20cm;
+    background-image: linear-gradient(rgba(6,18,30,0.9),rgba(6,18,30,0.9)),url(images/background.jpg);
+    background-size: cover;
+    background-position: center;
+}
+nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 8vh;
+}
+.logo{
+    color: white;
+    font-size: 30px;
+    letter-spacing: 2px;
+}
+.navbar{
+    display: flex;
+    justify-content: space-around;
+    width: 50%;
+    margin-top: 10px;
+    margin-right: 6cm;
+    top: 7px;
+}
+.navbar li{
+    list-style: none;
+}
+.navbar a{
+    color: white;
+    text-decoration: none;
+    letter-spacing: 2px;
+    font-size: 18px;
+    margin-left: 40px;
+}
+.admin-login{
+    width: 100px;
+    padding: 8px 0;
+    outline: none;
+    border: 2px solid #d30239;
+    border-radius: 50px;
+    background: #d30239;
+    color: white;
+}
+.burger{
+    display: none;
+}
+.burger div{
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 3px;
+}
+.swiper {
+    width: 30cm;
+    height: 15cm;
+    top: 1.5cm;
+  }
+
+.swiper-slide {
+    font-size: 18px;
+    background: transparent;
+}
+.affiche img{
+    height: 10cm;
+    width: 8cm;
+}
+.swiper-slide .affiche{
+    margin-left: 18cm;
+    margin-top: -11cm;
+}
+.swiper-slide .titre  {
+    height: 12cm;
+    width: 15cm;
+    margin-top: 2cm;
+    margin-left: 5cm;
+}
+.swiper-slide .titre h1{
+    padding-top: 4cm;
+    margin-bottom: 0.75cm;
+    color: white;
+}
+.swiper-slide .titre h3{
+    margin-bottom: 0.75cm;
+    color: white;
+}
+.voir-details{
+    width: 100px;
+    padding: 8px 0;
+    outline: none;
+    border: 2px solid #d30239;
+    border-radius: 50px;
+    background: #d30239;
+    color: white;
+}
+/*design de la partie des programmes*/
+.programmes{
+    width: 100%;
+    height: 68cm;
+    background: #030d17;
+}
+.prog{
+    display: flex;
+    color: white;
+    padding-top: 0.5cm;
+    padding-left: 0.75cm;
+}
+.prog h4{
+    color: #d30239;
+    margin-left: 27cm;
+}
+.programmes h2{
+    color: #d30239;
+    margin-left: 1.5cm;
+    margin-top: 0.75cm;
+}
+.Swiper2{
+    margin-top: -1cm;
+}
+.swiper-slide2 {
+    height: 13cm;
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    border-radius: 15px;
+}
+.swiper-slide2 img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+}
+/*design de la section contacts*/
+.contacts{
+    width: 100%;
+    height: 16cm;
+    background: #06121e;
+    color: #fff;
+}
+.contacts h1{
+    padding-top: 0.5cm;
+    padding-left: 0.75cm;
+}
+.nom .form-control{
+    background: none;
+}
+.email .form-control{
+    background: none;
+}
+.message .form-control{
+    background: none;
+}
+.btn-contact{
+    width: 100px;
+    padding: 8px 0;
+    outline: none;
+    border-radius: 50px;
+    color: white;
+    margin-left: 5.5cm;
+}
+.container{
+    width: 15cm;
+}
+.nom{
+    margin-left: 2cm;
+}
+.email{
+    margin-left: 2cm;
+}
+.message{
+    margin-left: 2cm;
+}
+/*design du footer*/
+.footer{
+    width: 100%;
+    height: 10cm;
+    background-image: linear-gradient(rgba(6,18,30,0.9),rgba(6,18,30,0.9)),url(images/background.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.about{
+    color: #fff;
+    margin-left: 7cm;
+}
+.about .p1{
+    padding-top: 0.5cm;
+    padding-left: 9cm;
+    margin-bottom: -0.5cm;
+}
+.about .p2{
+    padding-left: 7.5cm;
+    margin-bottom: -0.5cm;
+}
+.about .p3{
+    padding-left: 6.2cm;
+    margin-bottom: -0.5cm;
+}
+.nb-film p{
+    color: white;
+    padding-top: 1.5cm;
+    margin-left: 9cm;
+    font-size: 20px;
+}
+.nb-spectacle p{
+    color: white;
+    margin-top: -2cm;
+    margin-left: 19cm;
+    font-size: 20px ;
+}
+.nb-concert p{
+    color: white;
+    margin-top: -2cm;
+    margin-left: 30cm;
+    font-size: 20px;
+}
+.facebook{
+    color: white;
+}
+.instagram{
+    color: white;
+}
+.tel{
+    color: white;
+}
+.map{
+    color: white;
+}
+.reseau{
+    margin-top: 1.5cm;
+    margin-left: 13cm;
+}
+.reseau span{
+    padding-right: 4cm;
+}
+h5{
+    color: white;
+    font-size: smaller;
+    margin-top: 1.5cm;
+    margin-left: 17.5cm;
+}
