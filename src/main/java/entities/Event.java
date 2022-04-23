@@ -3,6 +3,8 @@ package entities;
 import java.io.Serializable;
 import javax.persistence.*;
 import java.math.BigDecimal;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -131,5 +133,9 @@ public class Event implements Serializable {
 		return booking;
 	}
 
+	public String getEventDateToString() {
+		DateFormat df = new SimpleDateFormat("yyyy-MM-dd");
+		return df.format(this.dateEvent);
+	}
 	 
 }

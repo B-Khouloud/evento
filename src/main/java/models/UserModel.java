@@ -41,7 +41,7 @@ public class UserModel {
 		return users;
 	}
 
-	public User addUser(String username, String password, String role) {
+	public User signup(String username, String password, String role) {
 		User user = new User();
 		
 		user.setUsername(username);
@@ -52,5 +52,17 @@ public class UserModel {
 		
 		return user;
 	}
+	
+	//Sign in
+	public User getUserByLoginAndPwd (String login, String pwd) {
+		User user = null;
+		TypedQuery<User> query = em.createNamedQuery("User.findUserByLoginAndPwd", User.class);
+		query.setParameter(1, login);
+		query.setParameter(2, pwd);
+		user = query.getSingleResult();
+		return user;
+	}
+	
+	
 
 }

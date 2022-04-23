@@ -23,7 +23,7 @@
                 <li><a href="#">Programmes</a></li>
                 <li><a href="#">Contacts</a></li>
                 <li><a href="#">A propos</a></li>
-                <a href="admin.jsp"><input class="admin-login" type="submit" value="Sign in"></a>
+                <a href="seConnecter.jsp"><input class="admin-login" type="submit" value="Se connecter"></a>
             </ul>
         </nav>
         <div class="swiper mySwiper">

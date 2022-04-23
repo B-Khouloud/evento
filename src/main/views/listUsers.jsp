@@ -16,9 +16,8 @@
           <h1>Evento</h1>
         </div>
         <ul class="navbar">
-          <li><a href="/events?action=list">Events</a></li>
-          <li><a href="/users?action=list">Users</a></li>
-          <li><a href="#">Commandes</a></li>
+          <li><a href="events?action=list">Events</a></li>
+          <li><a href="users?action=list">Users</a></li>
           <a type="button" class="signout" href="home.jsp">Sign out</a>
         </ul>
       </nav>
@@ -30,7 +29,6 @@
 	              <th scope="col">Username</th>
 	              <th scope="col">Password</th>
 	              <th scope="col">Role</th>
-	              <th scope="col"></th>
 	              <th scope="col"></th>
 	            </tr>
 	          </thead>
@@ -46,7 +44,6 @@
 		    	</c:forEach>
             </tbody>
         </table>
-        <a href="Controller?action=Add" name="action" value="Add">Add</a>
         
       </div>
 </body>

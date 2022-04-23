@@ -2,10 +2,10 @@
     margin: 0;
     padding: 0;
 }
-.dashboard{
+.client{
     width: 100%;
     height: 20cm;
-    background: linear-gradient(rgba(6,18,30,1),rgba(6,18,30,1));
+    background-image: linear-gradient(rgba(6,18,30,1),rgba(6,18,30,1));
 }
 nav{
     display: flex;
@@ -17,6 +17,7 @@ nav{
     color: white;
     font-size: 30px;
     letter-spacing: 2px;
+    margin-left: -25cm;
 }
 .navbar{
     display: flex;
@@ -36,28 +37,7 @@ nav{
     font-size: 18px;
     margin-left: 40px;
 }
-.signout{
-    width: 120px;
-    padding: 8px 0;
-    outline: none;
-    border: 2px solid #d30239;
-    border-radius: 50px;
-    background: #d30239;
-    color: white;
-    margin-top: 0.5cm;
-    margin-left: 36cm;
-}
-.container {
-    margin-top: 2cm;
-    margin-left: 1cm;
-}
-.table{
-    color: white;
-}
-.ajout{
-    margin-left: 35cm;
-}
-.btn-ajout{
+.admin-login{
     width: 100px;
     padding: 8px 0;
     outline: none;
@@ -65,6 +45,49 @@ nav{
     border-radius: 50px;
     background: #d30239;
     color: white;
-    margin-top: 0.5cm;
-    margin-left: 33cm;
+}
+.formulaire{
+    height: 17.5cm;
+    width: 12cm;
+    margin-top:0.1cm ;
+    margin-left: 14cm;
+    border-radius: 30px;
+    border: 2px solid #d30239;
+}
+.nom{
+    color: white;
+    padding-top: 0.5cm;
+    margin-bottom: 1.2cm;
+    margin-left: 3cm;
+}
+.prenom{
+    color: white;
+    padding-top: 0.5cm;
+    margin-bottom: 1.2cm;
+    margin-left: 3cm;
+}
+.email{
+    color: white;
+    padding-top: 0.5cm;
+    margin-bottom: 1.2cm;
+    margin-left: 3cm;
+}
+.mdp{
+    color: white;
+    margin-bottom: 1.2cm;
+    margin-left: 3cm;
+}
+.btn-ad{
+    width: 100px;
+    padding: 8px 0;
+    outline: none;
+    border: 2px solid #d30239;
+    border-radius: 50px;
+    background: #d30239;
+    color: white;
+    margin-left:4.7cm;
+}
+.btn2{
+    margin-top: -0.5cm;
+    margin-left: 4.7cm;
 }

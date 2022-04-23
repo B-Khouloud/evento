@@ -11,6 +11,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import entities.User;
 import models.UserModel;
@@ -43,6 +44,7 @@ public class UserController extends HttpServlet {
 		String action = request.getParameter("action");
 		RequestDispatcher requestDispatcher;
 		
+		//all users
 		if (action.contentEquals("list")) {
 			List<User> users = new ArrayList<User>();
 			users = userModel.getAllUsers();
@@ -50,6 +52,36 @@ public class UserController extends HttpServlet {
 			request.setAttribute("users", users);
 			requestDispatcher = request.getRequestDispatcher("listUsers.jsp");
 			requestDispatcher.forward(request, response);
+		}
+		
+		//signup
+		if(action != null && action.equals("signup")) {
+			String username = request.getParameter("username");
+			String password = request.getParameter("password");
+			String role = request.getParameter("role");
+			System.out.println("ok");
+			userModel.signup(username,password,role);
+			requestDispatcher = request.getRequestDispatcher("listUsers.jsp");
+			requestDispatcher.forward(request, response);
+		}
+		
+		//signin
+		if(action !=null && action.equals("Se connecter")) {
+			String login = request.getParameter("nom");
+			String pwd = request.getParameter("mdp");
+			User user = null;
+			user= userModel.getUserByLoginAndPwd(login,pwd);
+			if(user !=null) {
+				HttpSession session = request.getSession(true);
+				session.setAttribute("user", user);
+				System.out.println(((User) session.getAttribute("user")).getId());
+				
+			}
+			else {
+				request.setAttribute("messageerreur","verifier vos coordonnees");
+				requestDispatcher = request.getRequestDispatcher("inscrire.jsp");
+			}
+
 		}
 	}
 

@@ -10,54 +10,56 @@
     <link rel="stylesheet" href="listEvents.css">
 </head>
 <body>
-<section class="dashboard">
-      <nav class="deconnecter">
-        <div class="logo">
-          <h1>Evento</h1>
-        </div>
-        <ul class="navbar">
-          <li><a href="/events?action=list">Events</a></li>
-          <li><a href="/users?action=list">Users</a></li>
-          <li><a href="#">Commandes</a></li>
-          <a type="button" class="signout" href="home.jsp">Sign out</a>
-        </ul>
-      </nav>
-      <!-- Events -->
-      <div class="container">
-        <table class="table">
-          <thead>
-            <thead>
-	            <tr>
-	              <th scope="col">Title</th>
-	              <th scope="col">producer</th>
-	              <th scope="col">Date</th>
-	              <th scope="col">Location</th>
-	              <th scope="col">Type</th>
-	              <th scope="col">Description</th>
-	              <th scope="col">Price</th>
-	              <th scope="col"></th>
-	              <th scope="col"></th>
-	            </tr>
-	          </thead>
-          </thead>
-          <tbody>
-	           <c:forEach var="event" items="${requestScope.events}">
-					    	<tr>
-							      <td><c:out value="${event.title} "></c:out></td>
-					              <td><c:out value="${event.producer} "></c:out></td>
-					              <td><c:out value="${event.dateEvent} "></c:out></td>
-					              <td><c:out value="${event.location} "></c:out></td>
-					              <td><c:out value="${event.type} "></c:out></td>
-					              <td><c:out value="${event.description} "></c:out></td>
-					              <td><c:out value="${event.price} "></c:out></td>
-					              <td><img src="https://img.icons8.com/material-outlined/24/d30239/chisel-tip-marker.png"/></td>
-					              <td><img src="https://img.icons8.com/material-outlined/24/d30239/filled-trash.png"/></td>
-					         </tr>
-		    	</c:forEach>
-            </tbody>
-        </table>
-      </div>
-      <!-- Users -->
+		<section class="dashboard">
+		      <nav class="deconnecter">
+		        <div class="logo">
+		          <h1>Evento</h1>
+		        </div>
+		        <ul class="navbar">
+		          <li><a href="events?action=list">Evenements</a></li>
+		          <li><a href="users?action=list">Utilisateurs</a></li>
+		          <a type="button" class="signout" href="home.jsp">Se deconnecter</a>
+		        </ul>
+		      </nav>
+		      <!-- Events -->
+		      <div class="container">
+		        <table class="table">
+		          <thead>
+		            <thead>
+			            <tr>
+			              <th scope="col">Title</th>
+			              <th scope="col">producer</th>
+			              <th scope="col">Date</th>
+			              <th scope="col">Location</th>
+			              <th scope="col">Type</th>
+			              <th scope="col">Description</th>
+			              <th scope="col">Price</th>
+			              <th scope="col"></th>
+			              <th scope="col"></th>
+			            </tr>
+			          </thead>
+		          </thead>
+		          <tbody>
+			           <c:forEach var="event" items="${requestScope.events}">
+							    	<tr>
+									      <td><c:out value="${event.title} "></c:out></td>
+							              <td><c:out value="${event.producer} "></c:out></td>
+							              <td><c:out value="${event.dateEvent} "></c:out></td>
+							              <td><c:out value="${event.location} "></c:out></td>
+							              <td><c:out value="${event.type} "></c:out></td>
+							              <td><c:out value="${event.description} "></c:out></td>
+							              <td><c:out value="${event.price} "></c:out></td>
+							              <td><a href="events?action=view&id=${event.id}"><img src="https://img.icons8.com/material-outlined/24/d30239/chisel-tip-marker.png"/></a></td>
+							              <td><a href="events?action=remove&id=${event.id}"><img src="https://img.icons8.com/material-outlined/24/d30239/filled-trash.png"/></a></td>
+							         </tr>
+				    	</c:forEach>
+		            </tbody>
+		        </table>
+		      </div>
+		      <div class="ajouter">
+		      <a  href="addEvent.jsp"><input class="btn-ajout" type="button" name="add" value="ajouter"></a>
+		      </div>
+		    </section>
       
       
       
@@ -65,10 +67,7 @@
       
       
       
-      <div class="ajouter">
-        <!--<button class="btn-ajout">Ajouter</button>-->
-      </div>
-    </section>
+      
       
  
       

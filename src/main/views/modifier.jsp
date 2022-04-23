@@ -13,17 +13,18 @@
 <body>
 <section class="modifier">
         <div class="container-fluid">
-            <form class="formulaire was-validated col-6" method="post" action="ProjetServlet">
+            <form class="formulaire was-validated col-6" method="post" action="events">
+            <input type="hidden" name="id" value="${requestScope.event.id}">
                 <div class="row">
                     <div class="titre col-6">
                         <label class="form-label">Titre</label>
-                        <input class="form-control" required type="text" id="titre" name="titre">
+                        <input class="form-control" required type="text" id="titre" name="title" value="${requestScope.event.title}">
                         <div class="valid-feedback">Valider</div>
                         <div class="invalid-feedback">Champs obligatoire</div>
                     </div>
                     <div class="realiser-par col-6">
                         <label class="form-label">Realiser par</label>
-                        <input class="form-control" required type="text" id="producteur" name="producteur" >
+                        <input class="form-control" required type="text" id="producteur" name="producer" value="${requestScope.event.producer}">
                         <div class="valid-feedback">Valider</div>
                         <div class="invalid-feedback">Champs obligatoire</div>
                     </div>
@@ -31,13 +32,13 @@
                 <div class="row">
                     <div class="date col-6">
                         <label class="form-label">Date</label>
-                        <input class="form-control" required type="date" id="date" name="date" >
+                        <input class="form-control" required type="date" id="date" name="dateEvent" value="${requestScope.event.getEventDateToString()}">
                         <div class="valid-feedback">Valider</div>
                         <div class="invalid-feedback">Champs obligatoire</div>
                     </div>
                     <div class="localisation col-6">
                         <label class="form-label">Localisation</label>
-                        <input class="form-control" required type="text" id="localisation" name="localisation" >
+                        <input class="form-control" required type="text" id="localisation" name="location" value="${requestScope.event.location}">
                         <div class="valid-feedback">Valider</div>
                         <div class="invalid-feedback">Champs obligatoire</div>
                     </div>
@@ -45,18 +46,18 @@
                 <div class="row">
                     <div class="type col-6">
                         <label class="form-label">Type</label>
-                        <select required class="form-select" id="sel" name="select">
-                            <option>Film</option>
-                            <option>Piece de theatre</option>
-                            <option>Concert</option>
-                            <option>Match</option>
+                        <select required class="form-select" id="sel" name="type" >
+                            <option value="film" ${requestScope.event.type == "film" ? 'selected="selected"' : ''}>Film</option>
+                            <option value="theatre" ${requestScope.event.type == "theatre" ? 'selected="selected"' : ''}>Piece de theatre</option>
+                            <option value="concert" ${requestScope.event.type == "concert" ? 'selected="selected"' : ''}>Concert</option>
+                            <option value="game" ${requestScope.event.type == "game" ? 'selected="selected"' : ''}>Match</option>
                         </select>
                         <div class="valid-feedback">Valider</div>
                         <div class="invalid-feedback">Champs obligatoire</div>
                     </div>
                     <div class="prix col-6">
                         <label class="form-label">Prix</label>
-                        <input class="form-control" required type="number" id="prix" name="prix">
+                        <input class="form-control" required type="number" id="prix" name="price" value="${requestScope.event.price}">
                         <div class="valid-feedback">Valider</div>
                         <div class="invalid-feedback">Champs obligatoire</div>
                     </div>
@@ -64,7 +65,7 @@
                 <div class="row">
                     <div class="desc col-6">
                         <label class="form-label">Decription</label>
-                        <textarea name="description" required id="desc" cols="30" rows="10"></textarea>
+                        <textarea name="description" required id="desc" cols="30" rows="10" >${requestScope.event.description}</textarea>
                         <div class="valid-feedback">Valider</div>
                         <div class="invalid-feedback">Champs obligatoire</div>
                     </div>
@@ -73,7 +74,7 @@
                         <input id="file" class="input-file" type="file" name="file">
                     </div>
                 </div>
-                <input class="btn-modifier" type="submit" name="action" value="modifier">
+                <input class="btn-modifier" type="submit" name="action" value="edit">
             </form>
         </div>
     </section>  
